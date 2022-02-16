@@ -1,5 +1,5 @@
+//balance input fucntion
 function income() {
-
     const incomeText = document.getElementById('income-field').value;
     const incomeNum = parseFloat(incomeText);
     if (typeof incomeNum == "number") {
@@ -17,7 +17,7 @@ function income() {
 
 }
 
-
+//total expence function
 function totalExpense() {
     const foodText = document.getElementById('food').value;
     const foodNum = parseFloat(foodText);
@@ -51,6 +51,7 @@ function totalExpense() {
 
 }
 
+//parcentage calculation
 function percentageCalulation() {
     const percentageText = document.getElementById('percentage');
     const percentageNum = parseFloat(percentageText.value);
@@ -72,19 +73,21 @@ function percentageCalulation() {
         document.getElementById('second-alert').innerText = "Give Correct Input";
     }
 }
-
+//calculate remaining balance
 function remainingBalance() {
     const remainBalance = document.getElementById('remain-balance');
     const balanceLeft = income() - percentageCalulation();
     remainBalance.innerText = balanceLeft;
 }
 
+//handel add event listener for calculate button
 document.getElementById('calculate-button').addEventListener('click', function () {
-    income();
-    totalExpense();
+    income();//calling the income fuction
+    totalExpense();//calling the total expencse function
 });
 
+//handel add event listener for save button
 document.getElementById('save-button').addEventListener('click', function () {
-    percentageCalulation();
-    remainingBalance();
+    percentageCalulation();//calling percent function
+    remainingBalance(); //calling the remaining balance fucntion
 });
