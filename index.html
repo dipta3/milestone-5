@@ -10,33 +10,61 @@
 </head>
 <body>
     <header>
-        <h1 class="text-primary text-center">Money Saver</h1>
+        <h1 class="text-primary text-center mt-1 mb-3">Money Saver</h1>
     </header>
 
-    <main>
+    <main class="mb-3">
         <div class="container">
             <div class="row">
-              <div class="col col-lg-8">
-                <img class="mg-fluid" src="images/money.jpg" alt="" height="815px" width="800px">
+              <div class="col col-12 col-lg-8">
+                <img class="img-fluid rounded" src="images/money.jpg" alt="" height="850px" width="100%">
               </div>
-              <div class="col col-lg-4 bg-secondary bg-opacity-10 p-5" >
+              <div class="col col-12 col-lg-4 bg-secondary bg-opacity-10 p-5" >
                 <div class="text-center">
-                    <h3 >Income</h3>
-                   <h6 class="mb-4">Income: <input type="text" id="income-field"></h6>
-                   <h3>Expences</h3>
+                  
+                    <h3 class="mb-3">Income</h3>
+                    <div class="row">
+                      <div class="col-4">
+                        <h6 class="mb-4">Income:</h6>
+                      </div>
+                      <div class="col-8">
+                        <h6><input type="text" id="income-field"></h6>
+                      </div>
+                    </div>
+                   
+                   <h3 class="mb-3">Expences</h3>
 
-                   <h6>Food: <span><input type="text" id="food"></span> </h6>
-                  <h6>Rent: <span><input type="text" id="rent"></span> </h6>
-                  <h6 class="mb-4">Clothes: <span><input type="text" id="cloth"></span> </h6>
+                   <div class="row">
+                     <div class="col-4">
+                      <h6>Food:</h6>
+                     </div>
+                     <div class="col-8">
+                       <h6><input type="text" id="food"></h6>
+                     </div>
+                     <div class="col-4">
+                      <h6>Rent:</h6>
+                     </div>
+                     <div class="col-8">
+                       <h6><input type="text" id="rent"></h6>
+                     </div>
+                     <div class="col-4">
+                      <h6>Cloth:</h6>
+                     </div>
+                     <div class="col-8">
+                       <h6><input type="text" id="cloth"></h6>
+                     </div>
+                   </div>
+                   
 
                   <p id="alert-msg"></p>
                   <button id="calculate-button" type="button" class="btn btn-primary btn-lg mb-4">Calculate</button>
                   <h4>Total Expenses: <span id="total-expenses"></span></h4>
                   <h4 class="mb-4">Balance: <span id="balance"></span></h4>
 
-                  <p class="mb-4">Save: <input type="text">% <span><button type="button" class="btn btn-primary btn">Save </button></span></p>
-                  <h4>Saving Amount: <span></span> </h4>
-                  <h4>Remaining Balance: <span></span> </h4>
+                  <h6 class="mb-4">Save: <input id="percentage" type="text">% <span><button id = "save-button" type="button" class="btn btn-primary btn">Save </button></span></h6>
+                  <p id="second-alert"></p>
+                  <h4>Saving Amount: <span id="save-amount"></span></h4>
+                  <h4>Remaining Balance: <span id="remain-balance"></span> </h4>
 
 
                 </div>
